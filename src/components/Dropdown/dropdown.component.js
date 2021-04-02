@@ -1,20 +1,11 @@
 import React from "react";
+import SiteMenu from "../SiteMenu/site-menu.component";
 import * as S from "./dropdown.styles";
 
 const Dropdown = ({ isOpen }) => {
   return (
     <S.Dropdown isOpen={isOpen}>
-      <S.List>
-        <S.ListItem>
-          <S.Link to="/">HOME</S.Link>
-        </S.ListItem>
-        <S.ListItem>
-          <S.Link to="/portfolio">PORTFOLIO</S.Link>
-        </S.ListItem>
-        <S.ListItem>
-          <S.Link to="/contact">CONTACT ME</S.Link>
-        </S.ListItem>
-      </S.List>
+      <SiteMenu orientation="column" color="white" />
     </S.Dropdown>
   );
 };

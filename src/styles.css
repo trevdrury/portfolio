@@ -45,3 +45,9 @@ ul {
   min-width: 309px;
   margin: 0 auto;
 }
+
+@media (min-width: 768px) {
+  .ui-container {
+    width: 89.5vw;
+  }
+}

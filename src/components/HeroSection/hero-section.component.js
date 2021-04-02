@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../Button/button.component";
-import heroImg from "../../assets/image-homepage-hero@2x.jpg";
+import heroImg from "../../assets/mobile-image-homepage-hero@2x.jpg";
 import * as S from "./hero-section.styles";
 
 const HeroSection = () => {

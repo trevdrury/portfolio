@@ -18,8 +18,8 @@ class App extends React.Component {
           <Route path="/" exact component={HomePage} />
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/contact" component={Contact} />
-          <Footer />
         </div>
+        <Footer />
       </BrowserRouter>
     );
   }

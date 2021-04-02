@@ -1,12 +1,11 @@
 import React from "react";
 import Button from "../Button/button.component";
-import profileImg from "../../assets/image-homepage-profile@2x.jpg";
 import * as S from "./about-section.styles";
 
 const AboutSection = () => {
   return (
     <S.AboutSection>
-      <S.Image src={profileImg} alt="temp" />
+      <S.Image />
       <S.Content>
         <S.Heading>About Me</S.Heading>
         <S.Copy>

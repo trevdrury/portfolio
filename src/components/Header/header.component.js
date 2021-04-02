@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import useWindowSize from "../hooks/useWindowSize";
 import { Link } from "react-router-dom";
+import { ReactComponent as Logo } from "../../assets/logo.svg";
+import { colors } from "../../colors.js";
 import * as S from "./header.styles";
 import Burger from "../Burger/burger.component";
 import Dropdown from "../Dropdown/dropdown.component";
-import { ReactComponent as Logo } from "../../assets/logo.svg";
+import SiteMenu from "../SiteMenu/site-menu.component";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,19 +25,7 @@ const Header = () => {
         </div>
       );
     } else {
-      return (
-        <S.List>
-          <S.ListItem>
-            <S.Link to="/">HOME</S.Link>
-          </S.ListItem>
-          <S.ListItem>
-            <S.Link to="/portfolio">PORTFOLIO</S.Link>
-          </S.ListItem>
-          <S.ListItem>
-            <S.Link to="/contact">CONTACT ME</S.Link>
-          </S.ListItem>
-        </S.List>
-      );
+      return <SiteMenu orientation="row" color={colors.grayishDarkBlue} />;
     }
   };
 

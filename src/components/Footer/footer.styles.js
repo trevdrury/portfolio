@@ -4,35 +4,28 @@ import { colors } from "../../colors.js";
 
 export const Footer = styled.div`
   margin: 0;
-  padding: 0;
+  padding: 3.5rem 0;
   background-color: ${colors.grayishDarkBlue};
-`;
 
-export const List = styled.ul`
-  padding: 0;
-`;
-
-export const ListItem = styled.li`
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-`;
-
-export const Link = styled(hyperLink)`
-  color: white;
-  cursor: pointer;
-  text-decoration: none;
-
-  &:hover {
-    color: ${colors.slightlyDesaturatedCyan};
+  @media (min-width: 769px) {
+    padding: 1.5rem;
   }
 `;
 
-export const SocialWrapper = styled.div`
+export const FooterContent = styled.div`
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+
+  @media (min-width: 769px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
-export const SocialLink = styled.a`
+export const Link = styled(hyperLink)`
   svg {
     filter: brightness(0) invert(1);
   }
