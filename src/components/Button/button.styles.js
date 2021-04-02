@@ -4,6 +4,7 @@ import { colors } from "../../colors.js";
 
 export const IconContainer = styled.div`
   min-width: 48px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,6 +58,7 @@ export const ButtonContainer = styled.button`
 
 export const ButtonText = styled.div`
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
