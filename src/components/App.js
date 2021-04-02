@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import Header from "./Header/header.component";
 import HomePage from "./HomePage/home-page.component";
-import "../styles.css";
+import "../index.css";
 import Footer from "./Footer/footer.component";
 
 // Dummy components
