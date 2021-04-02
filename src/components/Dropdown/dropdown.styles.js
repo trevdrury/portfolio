@@ -7,7 +7,7 @@ export const Dropdown = styled.div`
   bottom: -210px;
   right: 0;
   width: 223px;
-  height: 186px;
+  max-height: 186px;
   background-color: ${colors.grayishDarkBlue};
   padding: 2.5rem 0;
 `;
