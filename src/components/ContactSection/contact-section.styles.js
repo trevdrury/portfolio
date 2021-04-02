@@ -6,12 +6,17 @@ export const ContactSection = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 2.5rem;
-  padding: 5rem 0;
+  padding-top: 7.188rem;
+  padding-bottom: 5rem;
 
   @media (min-width: 769px) {
     flex-direction: row;
     gap: 0;
     padding: 6rem 0;
+  }
+
+  @media (min-width: 1025px) {
+    padding: 9.375rem 0;
   }
 `;
 

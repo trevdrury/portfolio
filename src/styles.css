@@ -43,11 +43,18 @@ ul {
 .ui-container {
   width: 83vw;
   min-width: 309px;
+  max-width: 1110px;
   margin: 0 auto;
 }
 
 @media (min-width: 768px) {
   .ui-container {
     width: 89.5vw;
+  }
+}
+
+@media (min-width: 1025px) {
+  .ui-container {
+    width: 77vw;
   }
 }

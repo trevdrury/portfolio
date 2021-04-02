@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { colors } from "../../colors";
-import profileImgTablet from "../../assets/tablet-image-homepage-profile@2x.jpg";
-import profileImgDesktop from "../../assets/desktop-image-homepage-profile@2x.jpg";
-import profileImgMobile from "../../assets/mobile-image-homepage-profile@2x.jpg";
+import tabletProfile from "../../assets/tablet-profile.png";
+import desktopProfile from "../../assets/desktop-profile.jpg";
+import mobileProfile from "../../assets/mobile-profile.jpg";
 
 export const AboutSection = styled.section`
   display: flex;
@@ -13,22 +13,26 @@ export const AboutSection = styled.section`
 
   @media (min-width: 769px) {
     flex-direction: row;
+    margin: 0;
+    margin-top: 6rem;
     gap: 4.313rem;
   }
 
   @media (min-width: 1025px) {
+    margin: 0;
+    margin-top: 9.375rem;
     gap: 7.813rem;
   }
 `;
 
 export const Image = styled.div`
-  background: url(${profileImgMobile}) no-repeat;
+  background: url(${mobileProfile}) no-repeat;
   background-size: 311px 346px;
   width: 311px;
   height: 346px;
 
   @media (min-width: 769px) {
-    background: url(${profileImgTablet}) no-repeat;
+    background: url(${tabletProfile}) no-repeat;
     background-size: 281px 600px;
     background-position: top right;
     width: 281px;
@@ -36,9 +40,9 @@ export const Image = styled.div`
   }
 
   @media (min-width: 1025px) {
-    background: url(${profileImgDesktop}) no-repeat;
+    background: url(${desktopProfile}) no-repeat;
     background-size: 540px 600px;
-    background-position: top right;
+    background-position: center;
     width: 540px;
     height: 600px;
   }
