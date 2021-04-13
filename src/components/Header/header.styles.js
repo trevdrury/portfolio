@@ -6,5 +6,10 @@ export const Navigation = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 2rem 0;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+
+  @media (min-width: 769px) {
+    margin-bottom: 5.875rem;
+  }
 `;

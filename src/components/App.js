@@ -1,26 +1,28 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./Header/header.component";
 import HomePage from "./HomePage/home-page.component";
-import "../index.css";
+import PortfolioPage from "./PortfolioPage/portfolio-page.component";
 import Footer from "./Footer/footer.component";
+import ProjectDetailPage from "./ProjectDetailPage/project-detail-page.component";
+import "../index.css";
 
 // Dummy components
-const Portfolio = () => <h2>Portfolio</h2>;
 const Contact = () => <h2>Contact</h2>;
 
 class App extends React.Component {
   render() {
     return (
-      <BrowserRouter>
+      <Router>
         <div className="ui-container">
           <Header />
-          <Route path="/" exact component={HomePage} />
-          <Route path="/portfolio" component={Portfolio} />
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/portfolio" component={PortfolioPage} />
+          <Route path="/portfolio/projects/:id" component={ProjectDetailPage} />
           <Route path="/contact" component={Contact} />
         </div>
         <Footer />
-      </BrowserRouter>
+      </Router>
     );
   }
 }

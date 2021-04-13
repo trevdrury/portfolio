@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./button.styles";
 
-const Button = ({ type, width, disabled, children }) => {
+const Button = ({ type, width, disabled, onClick, children }) => {
   const renderIconContainer = () => {
     if (type === "primary") {
       return (
@@ -13,7 +13,12 @@ const Button = ({ type, width, disabled, children }) => {
   };
 
   return (
-    <S.ButtonContainer type={type} width={width} disabled={disabled}>
+    <S.ButtonContainer
+      type={type}
+      width={width}
+      disabled={disabled}
+      onClick={onClick}
+    >
       {renderIconContainer()}
       <S.ButtonText>{children}</S.ButtonText>
     </S.ButtonContainer>
