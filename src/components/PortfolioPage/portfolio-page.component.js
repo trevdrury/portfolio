@@ -24,6 +24,7 @@ const PortfolioPage = ({ projects, fetchProjects }) => {
             id={project.id}
             title={project.title}
             description={project.description}
+            orientation="column"
           />
         </S.ProjectWrapper>
       );

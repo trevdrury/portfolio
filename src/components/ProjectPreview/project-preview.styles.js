@@ -4,18 +4,19 @@ import { colors } from "../../colors";
 
 export const ContentWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${(props) => props.orientation};
   gap: 1.5rem;
   justify-content: center;
   padding: 1.5rem 0;
-  border-top: 1px solid rgba(32, 58, 76, 0.15);
-  border-bottom: 1px solid rgba(32, 58, 76, 0.15);
+  border-top: 1px solid ${colors.grayishDarkBlueOpacity};
+  border-bottom: 1px solid ${colors.grayishDarkBlueOpacity};
 
   @media (min-width: 769px) {
     display: flex;
     flex-basis: 100%;
     flex: 1;
     align-self: stretch;
+    max-height: 400px;
   }
 `;
 
@@ -28,7 +29,7 @@ export const Heading = styled.h2`
   color: ${colors.grayishDarkBlue};
 `;
 
-export const Content = styled.p`
+export const Copy = styled.p`
   font-family: "Public Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.875rem;
@@ -38,4 +39,19 @@ export const Content = styled.p`
 
 export const Link = styled(hyperLink)`
   text-decoration: none;
+`;
+
+export const Tags = styled.span`
+  font-family: "Public Sans", sans-serif;
+  font-weight: bold;
+  font-size: 0.8125rem;
+  line-height: 1.875rem;
+  color: ${colors.slightlyDesaturatedCyan};
+`;
+
+export const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
 `;

@@ -4,8 +4,9 @@ import { useParams } from "react-router";
 import { fetchProject } from "../../actions";
 import useWindowSize from "../hooks/useWindowSize";
 import ContactSection from "../ContactSection/contact-section.component";
-import Button from "../Button/button.component";
 import ResponsiveImage from "../ResponsiveImage/responsive-image.component";
+import ProjectPreview from "../ProjectPreview/project-preview.component";
+import ProjectDetail from "../ProjectDetail/project-detail.component";
 import * as S from "./project-detail-page.styles";
 
 const ProjectDetailPage = ({ project, fetchProject }) => {
@@ -15,40 +16,6 @@ const ProjectDetailPage = ({ project, fetchProject }) => {
   useEffect(() => {
     fetchProject(id);
   }, [id, fetchProject]);
-
-  const renderContent = () => {
-    if (width < 768) {
-      return (
-        <S.ContentContainer>
-          <S.Heading>{project.title}</S.Heading>
-          <S.Copy>{project.description}</S.Copy>
-          <S.Tags>
-            {project.tags} <br /> {project.tools}
-          </S.Tags>
-          <Button type="secondary" width="178px">
-            VIEW PROJECT
-          </Button>
-        </S.ContentContainer>
-      );
-    } else if (width < 1025) {
-      return (
-        <S.ContentContainer>
-          <S.Column>
-            <S.Heading>{project.title}</S.Heading>
-            <S.Tags>
-              {project.tags} <br /> {project.tools}
-            </S.Tags>
-            <Button type="secondary" width="178px">
-              VIEW PROJECT
-            </Button>
-          </S.Column>
-          <S.Column>
-            <S.Copy>{project.description}</S.Copy>
-          </S.Column>
-        </S.ContentContainer>
-      );
-    }
-  };
 
   if (!project) {
     return <h2>Loading...</h2>;
@@ -61,24 +28,20 @@ const ProjectDetailPage = ({ project, fetchProject }) => {
         tabletSrc={project.images.detail.heroImage.tablet}
         desktopSrc={project.images.detail.heroImage.desktop}
       />
-      {renderContent()}
-      <S.BackgroundContainer>
-        <S.SubHeading>Project Background</S.SubHeading>
-        <S.Copy>{project.background}</S.Copy>
-      </S.BackgroundContainer>
-      <S.PreviewContainer>
-        <S.SubHeading>Static Previews</S.SubHeading>
-        <ResponsiveImage
-          mobileSrc={project.images.detail.previewImageOne.mobile}
-          tabletSrc={project.images.detail.previewImageOne.tablet}
-          desktopSrc={project.images.detail.previewImageOne.desktop}
+      <S.Wrapper>
+        <ProjectPreview
+          id={project.id}
+          title={project.title}
+          description={project.description}
+          tags={project.tags}
+          tools={project.tools}
+          orientation={width > 768 && width < 1024 ? "row" : "column"}
         />
-        <ResponsiveImage
-          mobileSrc={project.images.detail.previewImageTwo.mobile}
-          tabletSrc={project.images.detail.previewImageTwo.tablet}
-          desktopSrc={project.images.detail.previewImageTwo.desktop}
+        <ProjectDetail
+          copy={project.background}
+          images={project.images.detail}
         />
-      </S.PreviewContainer>
+      </S.Wrapper>
       <ContactSection />
     </div>
   );
