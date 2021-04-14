@@ -8,6 +8,7 @@ export const colors = {
   lightGray: "hsl(240, 2%, 92%)",
   brightRed: "hsl(0, 90%, 57%)",
   grayishDarkBlueOpacity: "hsla(245, 10%, 22%, 0.15)",
+  gray10: "hsla(245,10%,22%,0.10)",
 };
 
 export const heading = css`

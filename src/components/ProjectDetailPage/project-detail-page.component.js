@@ -7,6 +7,7 @@ import ContactSection from "../ContactSection/contact-section.component";
 import ResponsiveImage from "../ResponsiveImage/responsive-image.component";
 import ProjectPreview from "../ProjectPreview/project-preview.component";
 import ProjectDetail from "../ProjectDetail/project-detail.component";
+import ProjectPager from "../ProjectPager/project-pager.component";
 import * as S from "./project-detail-page.styles";
 
 const ProjectDetailPage = ({ project, fetchProject }) => {
@@ -42,6 +43,7 @@ const ProjectDetailPage = ({ project, fetchProject }) => {
           images={project.images.detail}
         />
       </S.Wrapper>
+      <ProjectPager currentProject={project.id - 1} />
       <ContactSection />
     </div>
   );

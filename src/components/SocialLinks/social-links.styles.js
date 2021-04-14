@@ -8,6 +8,6 @@ export const SocialWrapper = styled.div`
 
 export const SocialLink = styled.a`
   svg {
-    filter: brightness(0) invert(1);
+    filter: ${(props) => (props.dark ? "none" : "brightness(0) invert(1)")};
   }
 `;
