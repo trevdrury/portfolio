@@ -17,6 +17,7 @@ export const heading = css`
   font-weight: bold;
   line-height: 2.625rem;
   letter-spacing: -0.36px;
+  text-transform: capitalize;
 `;
 
 export const subHeading = css`
@@ -24,6 +25,7 @@ export const subHeading = css`
   font-size: 2rem;
   line-height: 2.625rem;
   letter-spacing: -0.29px;
+  text-transform: capitalize;
 `;
 
 export const copy = css`

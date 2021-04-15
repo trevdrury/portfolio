@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link as hyperLink } from "react-router-dom";
-import { colors } from "../../colors";
+import { colors, heading, copy } from "../../colors";
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -21,20 +21,13 @@ export const ContentWrapper = styled.div`
 `;
 
 export const Heading = styled.h2`
-  font-family: "Ibarra Real Nova", serif;
-  font-size: 2.5rem;
-  font-weight: bold;
-  line-height: 2.625rem;
-  letter-spacing: -0.36px;
+  ${heading}
   color: ${colors.grayishDarkBlue};
 `;
 
 export const Copy = styled.p`
-  font-family: "Public Sans", sans-serif;
-  font-size: 1rem;
-  line-height: 1.875rem;
+  ${copy}
   color: ${colors.grayishDarkBlue};
-  opacity: 80%;
 `;
 
 export const Link = styled(hyperLink)`

@@ -3,18 +3,13 @@ import { useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import { ReactComponent as LeftArrow } from "../../assets/arrow-left.svg";
 import { ReactComponent as RightArrow } from "../../assets/arrow-right.svg";
-import { fetchProjects } from "../../actions";
 import * as S from "./project-pager.styles";
 
-const ProjectPager = ({ projects, fetchProjects, currentProject }) => {
+const ProjectPager = ({ projects, currentProject }) => {
   const history = useHistory();
   const [current, setCurrent] = useState(currentProject);
   const [previous, setPrevious] = useState(0);
   const [next, setNext] = useState(0);
-
-  useEffect(() => {
-    fetchProjects();
-  }, [fetchProjects]);
 
   useEffect(() => {
     setNext((current + 1) % projects.length);
@@ -62,4 +57,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { fetchProjects })(ProjectPager);
+export default connect(mapStateToProps)(ProjectPager);

@@ -2,7 +2,7 @@ import React from "react";
 import ResponsiveImage from "../ResponsiveImage/responsive-image.component";
 import * as S from "./project-detail.styles";
 
-const ProjectDetail = ({ copy, images }) => {
+const ProjectDetail = ({ copy, project }) => {
   return (
     <div>
       <S.BackgroundContainer>
@@ -12,14 +12,24 @@ const ProjectDetail = ({ copy, images }) => {
       <S.PreviewContainer>
         <S.SubHeading>Static Previews</S.SubHeading>
         <ResponsiveImage
-          mobileSrc={images.previewImageOne.mobile}
-          tabletSrc={images.previewImageOne.tablet}
-          desktopSrc={images.previewImageOne.desktop}
+          smallSrc={
+            require(`../../assets/images/detail/small/image-${project}-preview-1.jpg`)
+              .default
+          }
+          largeSrc={
+            require(`../../assets/images/detail/large/image-${project}-preview-1@2x.jpg`)
+              .default
+          }
         />
         <ResponsiveImage
-          mobileSrc={images.previewImageTwo.mobile}
-          tabletSrc={images.previewImageTwo.tablet}
-          desktopSrc={images.previewImageTwo.desktop}
+          smallSrc={
+            require(`../../assets/images/detail/small/image-${project}-preview-2.jpg`)
+              .default
+          }
+          largeSrc={
+            require(`../../assets/images/detail/large/image-${project}-preview-2@2x.jpg`)
+              .default
+          }
         />
       </S.PreviewContainer>
     </div>
