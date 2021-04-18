@@ -6,7 +6,7 @@ import mobileHeroImg from "../../assets/mobile-image-homepage-hero@2x.jpg";
 import tabletHeroImg from "../../assets/tablet-image-homepage-hero@2x.jpg";
 import desktopHeroImg from "../../assets/desktop-image-homepage-hero@2x.jpg";
 
-const HeroSection = () => {
+const HeroSection = ({ scrollHandler }) => {
   const [width] = useWindowSize();
 
   const setImageSrc = () => {
@@ -17,6 +17,10 @@ const HeroSection = () => {
       : mobileHeroImg;
   };
 
+  const handleClick = () => {
+    scrollHandler();
+  };
+
   return (
     <S.HeroSection>
       <S.Image src={setImageSrc()} />
@@ -24,7 +28,7 @@ const HeroSection = () => {
         <S.Heading>
           Hi, I'm Trevor Drury and I love building beautiful websites
         </S.Heading>
-        <Button type="primary" width="200px">
+        <Button type="primary" width="200px" onClick={handleClick}>
           ABOUT ME
         </Button>
       </S.Content>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import { connect } from "react-redux";
 import ContactSection from "../ContactSection/contact-section.component";
 import ResponsiveImage from "../ResponsiveImage/responsive-image.component";
@@ -6,19 +6,19 @@ import ProjectPreview from "../ProjectPreview/project-preview.component";
 import * as S from "./portfolio-page.styles";
 
 const PortfolioPage = ({ projects }) => {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   const renderProjectList = () => {
     return projects.map((project) => {
+      let baseUrl = `${process.env.PUBLIC_URL}/images/portfolio`;
       return (
         <S.ProjectWrapper key={project.id} id={project.id}>
           <ResponsiveImage
-            smallSrc={
-              require(`../../assets/images/portfolio/small/image-portfolio-${project.title}.jpg`)
-                .default
-            }
-            largeSrc={
-              require(`../../assets/images/portfolio/large/image-portfolio-${project.title}@2x.jpg`)
-                .default
-            }
+            mobile={`${baseUrl}/mobile/image-portfolio-${project.title}`}
+            tablet={`${baseUrl}/tablet/image-portfolio-${project.title}`}
+            desktop={`${baseUrl}/desktop/image-portfolio-${project.title}`}
           />
           <ProjectPreview
             id={project.id}

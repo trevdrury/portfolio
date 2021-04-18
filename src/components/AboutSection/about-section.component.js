@@ -1,10 +1,11 @@
 import React from "react";
 import Button from "../Button/button.component";
+import { Link } from "../ProjectPreview/project-preview.styles";
 import * as S from "./about-section.styles";
 
-const AboutSection = () => {
+const AboutSection = ({ scrollRef }) => {
   return (
-    <S.AboutSection>
+    <S.AboutSection ref={scrollRef}>
       <S.Image />
       <S.Content>
         <S.Heading>About Me</S.Heading>
@@ -18,9 +19,11 @@ const AboutSection = () => {
           outdoors. I love being out in nature whether that’s going for a walk,
           run or cycling. I’d love you to check out my work.
         </S.Copy>
-        <Button type="secondary" width="202px">
-          GO TO PORTFOLIO
-        </Button>
+        <Link to="/portfolio">
+          <Button type="secondary" width="202px">
+            GO TO PORTFOLIO
+          </Button>
+        </Link>
       </S.Content>
     </S.AboutSection>
   );

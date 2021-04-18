@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import ResponsiveImage from "../ResponsiveImage/responsive-image.component";
 import * as S from "./project-detail.styles";
 
 const ProjectDetail = ({ copy, project }) => {
+  const [baseUrl] = useState(`${process.env.PUBLIC_URL}/images/detail`);
+
   return (
     <div>
       <S.BackgroundContainer>
@@ -12,24 +14,14 @@ const ProjectDetail = ({ copy, project }) => {
       <S.PreviewContainer>
         <S.SubHeading>Static Previews</S.SubHeading>
         <ResponsiveImage
-          smallSrc={
-            require(`../../assets/images/detail/small/image-${project}-preview-1.jpg`)
-              .default
-          }
-          largeSrc={
-            require(`../../assets/images/detail/large/image-${project}-preview-1@2x.jpg`)
-              .default
-          }
+          mobile={`${baseUrl}/mobile/image-${project}-preview-1`}
+          tablet={`${baseUrl}/tablet/image-${project}-preview-1`}
+          desktop={`${baseUrl}/desktop/image-${project}-preview-1`}
         />
         <ResponsiveImage
-          smallSrc={
-            require(`../../assets/images/detail/small/image-${project}-preview-2.jpg`)
-              .default
-          }
-          largeSrc={
-            require(`../../assets/images/detail/large/image-${project}-preview-2@2x.jpg`)
-              .default
-          }
+          mobile={`${baseUrl}/mobile/image-${project}-preview-2`}
+          tablet={`${baseUrl}/tablet/image-${project}-preview-2`}
+          desktop={`${baseUrl}/desktop/image-${project}-preview-2`}
         />
       </S.PreviewContainer>
     </div>

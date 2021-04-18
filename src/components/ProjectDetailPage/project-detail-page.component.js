@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { connect } from "react-redux";
 import useWindowSize from "../hooks/useWindowSize";
 import ContactSection from "../ContactSection/contact-section.component";
@@ -10,6 +10,11 @@ import * as S from "./project-detail-page.styles";
 
 const ProjectDetailPage = ({ project }) => {
   const [width] = useWindowSize();
+  const [baseUrl] = useState(`${process.env.PUBLIC_URL}/images/detail`);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   if (!project) {
     return <h2>Loading...</h2>;
@@ -18,14 +23,9 @@ const ProjectDetailPage = ({ project }) => {
   return (
     <div>
       <ResponsiveImage
-        smallSrc={
-          require(`../../assets/images/detail/small/image-${project.title}-hero.jpg`)
-            .default
-        }
-        largeSrc={
-          require(`../../assets/images/detail/large/image-${project.title}-hero@2x.jpg`)
-            .default
-        }
+        mobile={`${baseUrl}/mobile/image-${project.title}-hero`}
+        tablet={`${baseUrl}/tablet/image-${project.title}-hero`}
+        desktop={`${baseUrl}/desktop/image-${project.title}-hero`}
       />
       <S.Wrapper>
         <ProjectPreview

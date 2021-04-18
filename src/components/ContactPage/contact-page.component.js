@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import SocialLinks from "../SocialLinks/social-links.component";
 import ContactForm from "../ContactForm/contact-form.component";
 import * as S from "./contact-page.styles";
 
 const ContactPage = () => {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <S.ContactPage>
       <S.Wrapper>
