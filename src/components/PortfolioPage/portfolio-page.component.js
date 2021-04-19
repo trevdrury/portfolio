@@ -12,7 +12,7 @@ const PortfolioPage = ({ projects }) => {
 
   const renderProjectList = () => {
     return projects.map((project) => {
-      let baseUrl = `${process.env.PUBLIC_URL}/images/portfolio`;
+      let baseUrl = `${process.env.PUBLIC_URL}/assets/portfolio`;
       return (
         <S.ProjectWrapper key={project.id} id={project.id}>
           <ResponsiveImage

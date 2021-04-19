@@ -49,3 +49,14 @@ export const TextArea = styled.textarea`
   ${inputStyles}
   height: 6rem;
 `;
+
+export const SubmitButton = styled.input`
+  width: 200px;
+  height: 48px;
+  background-color: #203a4c;
+  color: white;
+  font-family: "Public Sans", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+`;

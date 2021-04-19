@@ -3,7 +3,7 @@ import ResponsiveImage from "../ResponsiveImage/responsive-image.component";
 import * as S from "./project-detail.styles";
 
 const ProjectDetail = ({ copy, project }) => {
-  const [baseUrl] = useState(`${process.env.PUBLIC_URL}/images/detail`);
+  const [baseUrl] = useState(`${process.env.PUBLIC_URL}/assets/detail`);
 
   return (
     <div>

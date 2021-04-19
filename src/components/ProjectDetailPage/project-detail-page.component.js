@@ -10,7 +10,7 @@ import * as S from "./project-detail-page.styles";
 
 const ProjectDetailPage = ({ project }) => {
   const [width] = useWindowSize();
-  const [baseUrl] = useState(`${process.env.PUBLIC_URL}/images/detail`);
+  const [baseUrl] = useState(`${process.env.PUBLIC_URL}/assets/detail`);
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
