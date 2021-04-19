@@ -6,6 +6,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  flex: 2;
 `;
 
 const textStyles = css`
