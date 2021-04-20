@@ -1,21 +1,10 @@
-import React from "react";
-import useWindowSize from "../hooks/useWindowSize";
+import React, { useState } from "react";
 import Button from "../Button/button.component";
 import * as S from "./hero-section.styles";
-import mobileHeroImg from "../../assets/mobile-image-homepage-hero@2x.jpg";
-import tabletHeroImg from "../../assets/tablet-image-homepage-hero@2x.jpg";
-import desktopHeroImg from "../../assets/desktop-image-homepage-hero@2x.jpg";
+import ResponsiveImage from "../ResponsiveImage/responsive-image.component";
 
 const HeroSection = ({ scrollHandler }) => {
-  const [width] = useWindowSize();
-
-  const setImageSrc = () => {
-    return width > 1025
-      ? desktopHeroImg
-      : width > 768
-      ? tabletHeroImg
-      : mobileHeroImg;
-  };
+  const [baseUrl] = useState(`${process.env.PUBLIC_URL}/assets/mockup`);
 
   const handleClick = () => {
     scrollHandler();
@@ -23,7 +12,11 @@ const HeroSection = ({ scrollHandler }) => {
 
   return (
     <S.HeroSection>
-      <S.Image src={setImageSrc()} />
+      <ResponsiveImage
+        mobile={`${baseUrl}/mobile/mockup`}
+        tablet={`${baseUrl}/tablet/mockup`}
+        desktop={`${baseUrl}/desktop/mockup`}
+      />
       <S.Content>
         <S.Heading>
           Hi, I'm Trevor Drury and I love building beautiful websites

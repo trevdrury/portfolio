@@ -1,23 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../Button/button.component";
 import { Link } from "../ProjectPreview/project-preview.styles";
+import ResponsiveImage from "../ResponsiveImage/responsive-image.component";
 import * as S from "./about-section.styles";
 
 const AboutSection = ({ scrollRef }) => {
+  const [baseUrl] = useState(`${process.env.PUBLIC_URL}/assets/profile`);
+
   return (
     <S.AboutSection ref={scrollRef}>
-      <S.Image />
+      <S.Wrapper>
+        <ResponsiveImage
+          mobile={`${baseUrl}/mobile/profile`}
+          tablet={`${baseUrl}/tablet/profile`}
+          desktop={`${baseUrl}/desktop/profile`}
+        />
+      </S.Wrapper>
+
       <S.Content>
         <S.Heading>About Me</S.Heading>
         <S.Copy>
-          I’m a junior front-end developer looking for a new role in an exciting
-          company. I focus on writing accessible HTML, using modern CSS
-          practices and writing clean JavaScript. When writing JavaScript code,
-          I mostly use React, but I can adapt to whatever tools are required.
-          I’m based in Imperial, CA, but I’m happy working remotely and have
-          experience in remote teams. When I’m not coding, you’ll find me
-          outdoors. I love being out in nature whether that’s going for a walk,
-          run or cycling. I’d love you to check out my work.
+          I’m a musician and music teacher in Southern California looking for a
+          role as a front-end developer. I have experience working with HTML,
+          CSS, and JavaScript. I've also coded projects using ReactJS, Redux,
+          and many other frameworks and libraries. I’m happy working remotely or
+          relocating if neccessary.
         </S.Copy>
         <Link to="/portfolio">
           <Button type="secondary" width="202px">

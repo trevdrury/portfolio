@@ -1,8 +1,5 @@
 import styled from "styled-components";
 import { colors } from "../../colors";
-import tabletProfile from "../../assets/tablet-profile.png";
-import desktopProfile from "../../assets/desktop-profile.jpg";
-import mobileProfile from "../../assets/mobile-profile.jpg";
 
 export const AboutSection = styled.section`
   display: flex;
@@ -25,24 +22,16 @@ export const AboutSection = styled.section`
   }
 `;
 
-export const Image = styled.div`
-  background: url(${mobileProfile}) no-repeat;
-  background-size: 311px 346px;
+export const Wrapper = styled.div`
   width: 311px;
   height: 346px;
 
   @media (min-width: 769px) {
-    background: url(${tabletProfile}) no-repeat;
-    background-size: 281px 600px;
-    background-position: top right;
     width: 281px;
     height: 600px;
   }
 
   @media (min-width: 1025px) {
-    background: url(${desktopProfile}) no-repeat;
-    background-size: 540px 600px;
-    background-position: center;
     width: 540px;
     height: 600px;
   }
