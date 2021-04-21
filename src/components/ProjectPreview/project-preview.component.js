@@ -9,6 +9,7 @@ const ProjectPreview = ({
   tags,
   tools,
   orientation,
+  link,
 }) => {
   const renderTags = () => {
     if (tags) {
@@ -20,6 +21,27 @@ const ProjectPreview = ({
         </S.Tags>
       );
     }
+  };
+
+  const renderLink = () => {
+    let pathName = document.location.pathname;
+    if (pathName === "/portfolio") {
+      return (
+        <S.Link to={link}>
+          <Button type="secondary" width="175px">
+            VIEW PROJECT
+          </Button>
+        </S.Link>
+      );
+    }
+
+    return (
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <Button type="secondary" width="175px">
+          VIEW PROJECT
+        </Button>
+      </a>
+    );
   };
 
   const renderContent = () => {
@@ -44,11 +66,7 @@ const ProjectPreview = ({
           <S.Heading>{title}</S.Heading>
           <S.Copy>{description}</S.Copy>
           {renderTags()}
-          <S.Link to={`/portfolio/projects/${id}`}>
-            <Button type="secondary" width="175px">
-              VIEW PROJECT
-            </Button>
-          </S.Link>
+          {renderLink()}
         </S.ContentWrapper>
       );
     }

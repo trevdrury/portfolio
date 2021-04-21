@@ -35,6 +35,7 @@ const ProjectDetailPage = ({ project }) => {
           tags={project.tags}
           tools={project.tools}
           orientation={width > 768 && width < 1024 ? "row" : "column"}
+          link={project.liveUrl}
         />
         <ProjectDetail project={project.title} copy={project.background} />
       </S.Wrapper>

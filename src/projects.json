@@ -3,6 +3,7 @@
     {
       "title": "shortly",
       "description": "A fully responsive landing page built to the designs provided by Frontend Mentor. I used HTML, CSS, and JavaScript with ReactJS and Styled Components. This project also uses the Shrtcode API for link shortening.",
+      "liveUrl": "https://frontend-mentor-url-shortening-api-landing-page-ten.vercel.app/",
       "tags": "Front End Development",
       "tools": "HTML / CSS / JS",
       "background": "This project is a challenge from Frontend Mentor, a platform that enables you to practice building websites to design and project briefs. Each challenge includes mobile and desktop designs. Working on these projects has helped me refine my workflow, solve real-world coding problems, and learn new tools.",
@@ -11,6 +12,7 @@
     {
       "title": "pricing",
       "description": "This is a small project written with ReactJS and Styled Components. The toggle enables a user to switch back and forth between annual and monthly pricing plans, which are displayed on the cards below the toggle.",
+      "liveUrl": "https://front-end-mentor-pricing-component-with-toggle.vercel.app/",
       "tags": "Interaction Design / Front End Development",
       "tools": "HTML / CSS / JS",
       "background": "This project is a challenge from Frontend Mentor, a platform that enables you to practice building websites to design and project briefs. Each challenge includes mobile and desktop designs. Working on these projects has helped me refine my workflow, solve real-world coding problems, and learn new tools.",
@@ -19,6 +21,7 @@
     {
       "title": "slider",
       "description": "This project was built with HTML, CSS, and vanilla JavaScript. It is a simple testimonial slider that allows a user to click through reviews and is designed to be fully responsive.",
+      "liveUrl": "https://front-end-mentor-coding-bootcamp-testimonials-slider-ten.vercel.app/",
       "tags": "Interaction Design / Front End Development",
       "tools": "HTML / CSS / JS",
       "background": "This project is a challenge from Frontend Mentor, a platform that enables you to practice building websites to design and project briefs. Each challenge includes mobile and desktop designs. Working on these projects has helped me refine my workflow, solve real-world coding problems, and learn new tools.",
@@ -27,6 +30,7 @@
     {
       "title": "huddle",
       "description": "Another challenge from Frontend Mentor, this project is a fully responsive landing page for a fictional social media site. This project is written with HTML and CSS.",
+      "liveUrl": "https://frontend-mentor-huddle-landing-page-sable.vercel.app/",
       "tags": "Front End Development",
       "tools": "HTML / CSS ",
       "background": "This project is a challenge from Frontend Mentor, a platform that enables you to practice building websites to design and project briefs. Each challenge includes mobile and desktop designs. Working on these projects has helped me refine my workflow, solve real-world coding problems, and learn new tools.",

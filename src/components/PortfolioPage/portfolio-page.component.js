@@ -25,6 +25,7 @@ const PortfolioPage = ({ projects }) => {
             title={project.title}
             description={project.description}
             orientation="column"
+            link={`/portfolio/projects/${project.id}`}
           />
         </S.ProjectWrapper>
       );
