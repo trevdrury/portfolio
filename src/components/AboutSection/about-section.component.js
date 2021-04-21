@@ -24,7 +24,8 @@ const AboutSection = ({ scrollRef }) => {
           role as a front-end developer. I have experience working with HTML,
           CSS, and JavaScript. I've also coded projects using ReactJS, Redux,
           and many other frameworks and libraries. I’m happy working remotely or
-          relocating if neccessary.
+          relocating if neccessary. When I'm not coding, you'll find me playing
+          the piano, riding my bike, or hanging out with my dog Bruce.
         </S.Copy>
         <Link to="/portfolio">
           <Button type="secondary" width="202px">

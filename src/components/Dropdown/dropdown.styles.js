@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../colors.js";
+import { colors } from "../../styles.js";
 
 export const Dropdown = styled.div`
   display: ${(props) => (props.isOpen ? "inherit" : "none")};

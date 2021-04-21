@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link as hyperLink } from "react-router-dom";
-import { colors, heading, copy } from "../../colors";
+import { colors, heading, copy } from "../../styles";
 
 export const ContentWrapper = styled.div`
   display: flex;

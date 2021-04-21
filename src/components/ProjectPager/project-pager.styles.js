@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { colors, subHeading, copy } from "../../colors";
+import { colors, subHeading, copy } from "../../styles";
 
 export const ProjectPager = styled.div`
   display: flex;

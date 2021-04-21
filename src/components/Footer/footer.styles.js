@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link as hyperLink } from "react-router-dom";
-import { colors } from "../../colors.js";
+import { colors } from "../../styles.js";
 
 export const Footer = styled.div`
   margin: 0;

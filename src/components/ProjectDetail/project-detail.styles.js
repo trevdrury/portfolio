@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, heading, subHeading, copy } from "../../colors";
+import { colors, heading, subHeading, copy } from "../../styles";
 
 export const BackgroundContainer = styled.div`
   display: flex;

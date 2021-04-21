@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, heading, copy } from "../../colors";
+import { colors, heading, copy } from "../../styles";
 
 export const ContactPage = styled.div`
   display: flex;

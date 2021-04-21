@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { ReactComponent as DownArrows } from "../../assets/down-arrows.svg";
-import { colors } from "../../colors.js";
+import { colors } from "../../styles.js";
 
 export const IconContainer = styled.div`
   min-width: 48px;

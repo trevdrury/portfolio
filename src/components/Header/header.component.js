@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useWindowSize from "../hooks/useWindowSize";
 import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
-import { colors } from "../../colors.js";
+import { colors } from "../../styles.js";
 import * as S from "./header.styles";
 import Burger from "../Burger/burger.component";
 import Dropdown from "../Dropdown/dropdown.component";
